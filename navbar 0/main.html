@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<title>navbar</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="max-width">
+			<div class="logo">
+				<a href="#">Advent<span>ure.</span></a>
+			</div>
+			<ul class="menu">
+				<li><a class="menu-btn" href="#">Home</a></li>
+				<li><a class="menu-btn" href="#">About</a></li>
+				<li><a class="menu-btn" href="#">Services</a></li>
+				<li><a class="menu-btn" href="#">Gallery</a></li>
+				<li><a class="menu-btn" href="#">Contact</a></li>
+			</ul>
+			<div class="menu-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+	</nav>
+
+	<section class="banner-container">
+		<div class="banner">
+			<h1>New Adventure.</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 quis nostrud <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 tempor incididunt ut labore et.
+			</p>
+			<button class="btn">
+				Discover Now
+			</button>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				// sticky navbar
+				if(this.scrollY > 20){
+					$('.navbar').addClass("sticky");
+				}else{
+					$('.navbar').removeClass("sticky");
+				}
+			});
+
+			// toggle menu script
+			$('.menu-btn').click(function(){
+				$('.navbar .menu').toggleClass("active");
+				$('.menu-btn i').toggleClass("active");
+			})
+		});
+	</script>
+</body>
+</html>
