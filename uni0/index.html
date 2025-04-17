@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, footer{
+            background-color: darkcyan;
+            color: #333333;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+        }
+        ul li{
+               list-style: none;         
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .left{
+            background: lightsteelblue;
+            flex-basis: 18%;
+            color: #333333;
+            padding: 10px;
+        }
+        .left h1{
+            padding: 10px 0;
+        }
+        .main{
+            flex-basis: 64%;
+            padding: 10px;
+        }
+        .right{
+            padding: 10px;
+            flex-basis: 18%;
+            color: #333333;
+            background: lightskyblue;
+        }
+        hr{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+    </header>
+    <section class="container">
+        <sidebar class="left">
+            <h3>Most Viewed</h3>
+            <ul>
+                <li><a href="#">Article No.0</a></li>
+                <li><a href="#">Article No.1</a></li>
+                <li><a href="#">Article No.2</a></li>
+                <li><a href="#">Article No.3</a></li>
+            </ul>
+            <hr>
+            <h3>Most Viewed</h3>
+            <ul>
+                <li><a href="#">Article No.0</a></li>
+                <li><a href="#">Article No.1</a></li>
+                <li><a href="#">Article No.2</a></li>
+                <li><a href="#">Article No.3</a></li>
+            </ul>
+        </sidebar>
+        <section class="main">
+            <article>
+                <h2>Article number 0</h2>
+                <p>Some description texts...</p>
+                <p>Author: Admin :) | Date: December 2024</p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article number 1</h2>
+                <p>Some description texts...</p>
+                <p>Author: Admin :) | Date: December 2024</p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article number 2</h2>
+                <p>Some description texts...</p>
+                <p>Author: Admin :) | Date: December 2024</p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article number 3</h2>
+                <p>Some description texts...</p>
+                <p>Author: Admin :) | Date: December 2024</p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article number 4</h2>
+                <p>Some description texts...</p>
+                <p>Author: Admin :) | Date: December 2024</p>
+            </article>
+            <hr>
+            <article>
+                <h2>Article number 5</h2>
+                <p>Some description texts...</p>
+                <p>Author: Admin :) | Date: December 2024</p>
+            </article>
+        </section>
+        <section class="right">
+            <h3>Web Analytics</h3>
+            <ul>
+                <li>some data</li>
+                <li>some data</li>
+                <li>some data</li>
+                <li>some data</li>
+            </ul>
+            <hr>
+            <h3>Web Analytics</h3>
+            <ul>
+                <li>some data</li>
+                <li>some data</li>
+                <li>some data</li>
+                <li>some data</li>
+            </ul>
+        </section>
+    </section>
+    <footer>
+        <h1>Bye Bye :)</h1>
+    </footer>
+</body>
+</html>

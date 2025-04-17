@@ -1,0 +1,215 @@
+/* 
+    Primary Color: Deep Blue (Trust, Stability)
+
+        #2563EB (Vibrant blue for buttons/headings)
+
+        #1E40AF (Darker shade for hover states)
+
+    Secondary Color: Light Gray (Neutral balance)
+
+        #F3F4F6 (Backgrounds/cards)
+
+        #9CA3AF (Subtle text/icons)
+
+    Accent Color: Teal (Modern tech feel)
+
+        #0D9488 (Highlights/CTAs)
+*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+html{
+	scroll-behavior: smooth;
+}
+.navbar{
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	padding: 30px 0;
+	font-family: 'Ubuntu', sans-serif;
+	transition: all 0.3s ease;
+}
+.navbar .max-width{
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar .logo a{
+	font-size: 35px;
+	font-weight: 600;
+	color: #fff;
+}
+.navbar .logo a span{
+	color: #f8d65a;
+	transition: all 0.3ss ease;
+}
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+.navbar .menu li a{
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin-left: 25px;
+	text-transform: uppercase;
+	transition: color 0.3 ease;
+	display: fle;
+}
+.navbar .menu li a:hover{
+	color: #9CA3AF;
+	font-weight: bold;
+}
+.menu-btn{
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/* sticky navbar styling: */
+.navbar.sticky{
+	padding: 15px 50px;
+	background: #1E40AF;
+}
+
+section{
+	padding: 100px 0;
+}
+.banner-container{
+	position: relative;
+	width: 100%;
+	height: 110vh;
+	background-color: #2563EB;
+	background-size: cover;
+	background-position: center;
+}
+.banner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 60%;
+	height: calc(100vh - 60px);
+	color: #f8f8ff;
+}
+.banner h1{
+	font-size: 60px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.banner p{
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 25px;
+}
+.btn{
+	width: 200px;
+	padding: 15px 0;
+	margin: 20px 10px;
+	background: #ffc800;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	border: 3px solid #ffc800;
+	border-radius: 8px;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.btn:hover{
+	background-color: #d9aa00;
+	border-color: #cca000;
+}
+.menu-btn{
+    display: none;
+}
+
+/* Responsive media queries */
+@media(max-width: 991px){
+	.navbar .max-width{
+		padding: 0 50px;
+	}
+}
+@media(max-width: 947px){
+	.menu-btn{
+		display: block;
+		z-index: 999;
+	}
+	.banner{
+		max-width: 930px;
+	}
+	.banner h1{
+		font-size: 70px;
+	}
+	.banner p{
+		font-size: 20px;
+	}
+	.banner .btn{
+		font-size: 20px;
+	}
+	.menu-btn i.active::before{
+		content: "\f00d";
+	}
+	.navbar .menu{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		background: #031f25;
+		text-align: center;
+		padding-top: 80px;
+		transition: all 0.3s ease;
+	}
+	.navbar .menu.active{
+		left: 0;
+	}
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 20px 0;
+		font-size: 25px;
+	}
+}
+@media (max-width: 690px){
+	.navbar .max-width{
+		padding: 0 23px;
+	}
+	.banner h1{
+		font-size: 60px;
+	}
+	.banner .btn{
+		font-size: 20px;
+	}
+}
+@media (max-width: 500px){
+	.banner{
+		padding: 0 20px;
+	}
+	.banner h1{
+		font-size: 35px;
+	}
+	.banner p{
+		font-size: 16px;
+		text-align: center;
+	}
+	.banner .btn{
+		font-size: 14px;
+		width: 15px;
+	}
+	.navbar .menu li a{
+		font-size: 16px;
+	}
+}
